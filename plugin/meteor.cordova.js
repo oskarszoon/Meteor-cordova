@@ -162,7 +162,7 @@ MeteorCordova = function(iframeId, options) {
     // Try to fetch the element
     self.iframe = document.getElementById(self.iframeId);
 
-    self.url = self.iframe.src.replace(/\/+$/, '');
+    self.url = self.iframe.contentWindow.location.origin;
 
     if (self.iframe) {
       self.iframe.onload = function() {
